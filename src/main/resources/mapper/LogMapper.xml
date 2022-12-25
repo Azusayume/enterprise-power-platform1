@@ -107,7 +107,7 @@
     insert into log (action, created, data, 
       enterprise_id, admin_id)
     values (#{action,jdbcType=VARCHAR}, #{created,jdbcType=DATE}, #{data,jdbcType=VARCHAR}, 
-      #{enterpriseId,jdbcType=INTEGER}, #{adminId,jdbcType=INTEGER})selectByPrimaryKey
+      #{enterpriseId,jdbcType=INTEGER}, #{adminId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.epp.pojo.Log">
     <selectKey keyProperty="logId" order="AFTER" resultType="java.lang.Integer">
